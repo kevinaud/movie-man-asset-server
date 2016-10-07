@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-xs-10 col-xs-offset-1">
+    <div class="row around-xs movie-list">
+      
+      <div class="col-xs-4" *ngFor="let movie of movies">
+          <md-card class="box movie-card">
+            <md-card-subtitle>{{ movie.released }}</md-card-subtitle>
+            <md-card-title>{{ movie.title }}</md-card-title>   
+            <md-card-content>
+                  <p>{{ movie.description | shorten:100 }}</p>
+            </md-card-content>
+            <md-card-actions>
+                  <button md-button>LIKE</button>
+                  <button md-button>SHARE</button>
+            </md-card-actions>
+          </md-card>
+      </div>
+
+    </div>
+  </div>
+</div>
